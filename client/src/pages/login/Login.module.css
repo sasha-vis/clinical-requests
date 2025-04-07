@@ -1,0 +1,153 @@
+.loginContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #f5f7fa;
+	padding: 1rem;
+}
+
+.loginCard {
+	width: 100%;
+	max-width: 400px;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	padding: 2rem;
+	animation: fadeIn 0.3s ease;
+}
+
+.loginHeader {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.loginTitle {
+	color: #2d3748;
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.loginSubtitle {
+	color: #718096;
+	font-size: 0.875rem;
+}
+
+.loginForm {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.formGroup {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.formLabel {
+	font-size: 0.875rem;
+	color: #4a5568;
+	font-weight: 500;
+}
+
+.formInput {
+	padding: 0.75rem 1rem;
+	border: 1px solid #e2e8f0;
+	border-radius: 6px;
+	font-size: 1rem;
+	transition: all 0.2s;
+}
+
+.formInput:focus {
+	outline: none;
+	border-color: #4299e1;
+	box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.formInput::placeholder {
+	color: #a0aec0;
+}
+
+.loginButton {
+	width: 100%;
+	padding: 0.75rem;
+	background-color: #4299e1;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	font-size: 1rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background-color 0.2s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 44px;
+}
+
+.loginButton:hover {
+	background-color: #3182ce;
+}
+
+.loginButton:disabled {
+	background-color: #bee3f8;
+	cursor: not-allowed;
+}
+
+.buttonSpinner {
+	width: 20px;
+	height: 20px;
+	border: 3px solid rgba(255, 255, 255, 0.3);
+	border-radius: 50%;
+	border-top-color: white;
+	animation: spin 1s linear infinite;
+}
+
+.errorMessage {
+	background-color: #fff5f5;
+	color: #e53e3e;
+	padding: 0.75rem 1rem;
+	border-radius: 6px;
+	margin-bottom: 1.5rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 0.875rem;
+	border: 1px solid #fed7d7;
+}
+
+.errorIcon {
+	background-color: #e53e3e;
+	color: white;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media (max-width: 480px) {
+	.loginCard {
+		padding: 1.5rem;
+	}
+}
