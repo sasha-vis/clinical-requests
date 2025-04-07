@@ -10,7 +10,7 @@ docker-compose up -d mongodb
 
 2. Запуск сервера
 
-cd server && && npm install && npm run dev
+cd server && npm install && npm run dev
 
 3. Запуск клиента
 
